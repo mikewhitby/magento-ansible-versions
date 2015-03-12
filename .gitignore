@@ -2,4 +2,5 @@
 /public/*
 /profiler-runs/xdebug/*
 /profiler-runs/xhprof/*
+/magento-setup/sample-data/*
 !**/.gitkeep
