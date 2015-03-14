@@ -9,4 +9,4 @@ don't want the stuff that is in here, most likely because it will be a more
 specific nature.
 
 
-[1]: https://github.com/mikewhitby/magento-ansible "MAgento Ansible"
+[1]: https://github.com/mikewhitby/magento-ansible "Magento Ansible"
