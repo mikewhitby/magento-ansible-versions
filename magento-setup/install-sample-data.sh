@@ -62,9 +62,9 @@ cp -R /vagrant/magento-setup/sample-data/$sampleDataDir/media .
 if [ "$version" -ge "1900" ]; then
 	cp -R /vagrant/magento-setup/sample-data/$sampleDataDir/skin .
 fi
-mysqladmin -uroot -proot -f drop $version &> /dev/null
-mysqladmin -uroot -proot create $version &> /dev/null
-cat /vagrant/magento-setup/sample-data/$sampleDataDir/$sqlFile | mysql -uroot -proot $version &> /dev/null
+mysqladmin -uroot -f drop $version &> /dev/null
+mysqladmin -uroot create $version &> /dev/null
+cat /vagrant/magento-setup/sample-data/$sampleDataDir/$sqlFile | mysql -uroot $version &> /dev/null
 rm app/etc/local.xml &> /dev/null
 rm -rf var/cache/*
-n98-magerun install --dbHost="localhost" --dbUser="root" --dbPass="root" --dbName="$version" --useDefaultConfigParams=yes --installationFolder="." --baseUrl="http://magento.dev/$version/" --noDownload
+n98-magerun install --dbHost="localhost" --dbUser="root" --dbPass="" --dbName="$version" --useDefaultConfigParams=yes --installationFolder="." --baseUrl="http://magentoversions.dev/$version/" --noDownload
