@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
         ansible.limit = 'all'
         ansible.extra_vars = {
             private_interface: "192.168.56.102",
-            hostname: "magento-versions"
+            hostname: "magentoversions"
         }
     end
     
