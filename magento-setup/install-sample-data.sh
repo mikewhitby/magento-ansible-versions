@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-# a rigid demo data install script for Magento
-# magento directories need to be named as per the version, without dots
-# demo data must be located in sample-data, untarred
-# the error checking is fairly good, so you shouldn't be able to balls things up
-# needs n98-magerun
+# HOW TO USE - run download-sample-data.sh first, then run this
+# from within the directory of a magento install
+
+# a rigid demo data install script for magento, rigid because
+# directories need to be named as per the magento version, but
+# without dots.
 
 error () {
 	echo $1
@@ -46,11 +47,11 @@ fi
 # check the sample data exists for this version, exit if not
 sampleDataExists=true
 if [ ! -d "/vagrant/magento-setup/sample-data/$sampleDataDir/media" ]; then
-	echo "ERROR - /vagrant/magento-setup/sample-data/$sampleDataDir/media/ does not exist"
+	echo "ERROR - /vagrant/magento-setup/sample-data/$sampleDataDir/media/ does not exist, run download-sample-data.sh"
 	sampleDataExists=false
 fi
 if [ ! -f "/vagrant/magento-setup/sample-data/$sampleDataDir/$sqlFile" ]; then
-	echo "ERROR - /vagrant/magento-setup/sample-data/$sampleDataDir/$sqlFile does not exist"
+	echo "ERROR - /vagrant/magento-setup/sample-data/$sampleDataDir/$sqlFile does not exist, run download-sample-data.sh"
 	sampleDataExists=false
 fi
 if [ "$sampleDataExists" = false ]; then
