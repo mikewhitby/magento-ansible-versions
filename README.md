@@ -1,5 +1,9 @@
 # Magento Versions Box
 
+NOTE - you need to install GNU core utils, as defaults, before using this:
+
+    brew install coreutils --with-default-names
+
 Based on my [Magento Ansible box] [1], but with a slant towards running
 multiple versions of Magento on the same box with demo data. This box would be
 good for extension developers who need to run multiple versions of Magento.
